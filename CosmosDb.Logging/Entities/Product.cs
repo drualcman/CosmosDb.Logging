@@ -13,7 +13,7 @@ internal class Product
 
     public double Price { get; set; }
 
-    public string[] Tags { get; set; }
+    public List<string> Tags { get; set; }
 
     [JsonProperty(PropertyName = "ttl", NullValueHandling = NullValueHandling.Ignore)]
     public int? TimeToLive { get; set; }
