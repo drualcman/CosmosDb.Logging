@@ -117,3 +117,6 @@ await  bulkOperations.Execute();
 
 PlayWithQueries playWithQueries = new(container);
 await playWithQueries.Execute();
+
+PlayWithIndexes playWithIndexes = new(database);
+await playWithIndexes.Execute();

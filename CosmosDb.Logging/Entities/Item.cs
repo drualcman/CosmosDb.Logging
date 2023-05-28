@@ -9,6 +9,7 @@ internal class Item
               
     [JsonProperty(PropertyName = "categoryId")]
     public string CategoryId { get; set; }
+    public string CategoryName { get; set; }
     public string SKU { get; set; }
     public string Name { get; set; }
     public string Description { get; set; }
