@@ -114,3 +114,6 @@ await batchOperations.Execute();
 
 using BulkOperations bulkOperations = new(endpoint, key);
 await  bulkOperations.Execute();
+
+PlayWithQueries playWithQueries = new(container);
+await playWithQueries.Execute();

@@ -28,7 +28,7 @@ internal class BulkOperations : IDisposable
           .RuleFor(o => o.CategoryId, f => f.Commerce.Department(1))
           .RuleFor(o => o.Tags, f => f.Make(1, () => f.Random.Word()))
           .RuleFor(o => o.TimeToLive, f => Convert.ToInt32(f.Random.Int(1, 10)))
-          .Generate(25000);
+          .Generate(3);
 
         List<Task> concurrentTasks = new List<Task>();
         foreach(Product product in productsToInsert)
