@@ -17,6 +17,9 @@ Console.WriteLine($"New Database:\tId: {database.Id}");
 Container container = await database.CreateContainerIfNotExistsAsync("products", "/categoryId", 400);
 Console.WriteLine($"New Container:\tId: {container.Id}");
 
+ProcessChangeFeedHandlers processChangeFeedHandlers = new(client);
+await  processChangeFeedHandlers.Execute();
+
 Product saddle = new()
 {
     Id = "027D0B9A-F9D9-4C96-8213-C8546C4AAE71",
